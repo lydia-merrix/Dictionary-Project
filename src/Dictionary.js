@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./Dictionary.css";
 
 export default function Dictionary() {
@@ -8,9 +9,18 @@ export default function Dictionary() {
     setKeyword(event.target.value);
   }
 
+function handleResponse(response) {
+    console.log (response);
+}
+    
+ 
   function search(event) {
     event.preventDefault();
     alert(`Searching for ${keyword} definition`);
+
+let apiUrl = "https://https://api.dictionaryapi.dev/api/v2/entries/en_us/sunset";
+axios.get(apiUrl).then(handleResponse);
+
   }
 
   return (
