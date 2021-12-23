@@ -5,10 +5,6 @@ import "./Dictionary.css";
 export default function Dictionary() {
   let [keyword, setKeyword] = useState("");
 
-  function handleKeywordChange(event) {
-    setKeyword(event.target.value);
-  }
-
   function handleResponse(response) {
     console.log(response.data[0]);
   }
