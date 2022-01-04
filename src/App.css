@@ -1,3 +1,11 @@
+body {
+  background: rgb(181, 235, 218);
+}
+
+a {
+  color:#204134;
+}
+
 .App-header {
   margin: 30px 0;
 }
